@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "AddUp basics2",
+  "version": "1.0.0.0",
+  "content_scripts": [
+    {
+      "exclude_matches": [
+        "*://*.google.com/*",
+        "*://addup.cash/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["BannerContent.js"]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
+}
